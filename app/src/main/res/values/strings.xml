@@ -1,0 +1,139 @@
+<resources>
+    <string name="app_name">dutmaintenance</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_your_name">Enter Your name</string>
+    <string name="enter_your_surname">Enter your surname</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="click_to_login">Click to Login</string>
+    <string name="click_to_sign_up">Click to Sign Up</string>
+    <string name="problem_type">Problem Type</string>
+    <string name="campus_block">Campus Block</string>
+    <string name="campus_name">Campus Name</string>
+    <string-array name="campus_options">
+        <item>Steve Biko Campus</item>
+        <item>Ritson Campus</item>
+        <item>Ml Sultan Campus</item>
+        <item>City Campus Campus</item>
+    </string-array>
+
+    <string-array name="block_options_a">
+        <item>Block A1 Botanic Mansions</item>
+        <item>Block A2 Tromso Annex</item>
+        <item>Block A3 Berwyn Court</item>
+        <item>Block A4 Berea House</item>
+        <item>Block A5 Milena Court</item>
+        <item>Block A6 Tromso</item>
+        <item>Block B S2 </item>
+        <item>Block C Alan Pittendrigh Library and Lecture Venues</item>
+        <item>Block D1 Lansdell</item>
+        <item>Block D2 Exam Audit</item>
+        <item>Block D3 Student Admissions</item>
+        <item>Block D4 Physical Planning</item>
+        <item>Block D5 Student Housing</item>
+        <item>Block D6 Health Clinic</item>
+        <item>Block E Berea Student Resident</item>
+        <item>Block F1 Sqash Courts</item>
+        <item>Block G1 Security and Safety</item>
+        <item>Block G2 Security</item>
+        <item>Block H Fred Crooks Sports Centre</item>
+        <item>Block J Student Village Residence </item>
+        <item>Block K Stratford Student Residence </item>
+        <item>Block L Corlo Court Residence</item>
+        <item>Block M Maintenance Facilities,Printing and Transport</item>
+        <item>Block N Student Resident </item>
+        <item>Block O Open House</item>
+        <item>Block P Scala Diner</item>
+        <item>Block Q Student Residence</item>
+        <item>Block P Scala Diner</item>
+        <item>Block S S-Blocks(S2 to S11</item>
+        <item>Block R134 Steve Biko Road</item>
+    </string-array>
+
+    <string-array name="block_options_b">
+        <item>Block A Emergency Medical Care + Rescue</item>
+        <item>Block B Information Technology Block</item>
+        <item>Block C1 Accounting Block</item>
+        <item>Block C3 Centre for Hearing Impaired students</item>
+        <item>Block D1 Hotel School + Restaurants and Teaching Labs</item>
+        <item>Block D2 Hotel School Offices</item>
+        <item>Block D3 Hotel School Lecture Rooms And Computer Labs  </item>
+        <item>Block E1 Exam Venue</item>
+        <item>Block E2 Cateen</item>
+        <item>Block F EMCR Training Facility</item>
+        <item>Block G1 Dental Science </item>
+        <item>Block G2 Facility of Health Sciences: chriropractic + Somatology</item>
+        <item>Block H1 Radiography: Basic Medical Science</item>
+        <item>Block H2 Radiography</item>
+        <item>Block J Co-Operative Education</item>
+        <item>Block K Faculty of Health Sciences Clinics</item>
+        <item>Block L Mansfield Hall</item>
+        <item>Block M Drama Studies + Courtyard</item>
+        <item>Block N Horticulture Nursery</item>
+        <item>Block P Conference Venue </item>
+        <item>Block Q Tutorial Block </item>
+        <item>Block R security</item>
+    </string-array>
+
+    <string-array name="block_options_c">
+        <item>Block A Student Information Centre</item>
+        <item>Block B Institute of Waste Technology </item>
+        <item>Block C International Centre of Nonviolence</item>
+        <item>Block D International Education and Partnership</item>
+        <item>Block E Statistics G Floor</item>
+        <item>Block F Photography G floor</item>
+        <item>Block G B M Patel Library  </item>
+        <item>Block H Stores</item>
+        <item>Block J Chemistry G floor and 1st Floor</item>
+        <item>Block K Sculpture and Ceramic G floor</item>
+        <item>Block L Student Bag Store </item>
+        <item>Block M Cane Growers Hall</item>
+    </string-array>
+    <string-array name="block_options_d">
+        <item>Block A</item>
+        <item>Block B</item>
+        <item>Block C</item>
+        <item>Block D</item>
+        <item>Block E</item>
+        <item>Block F</item>
+        <item>Block G</item>
+        <item>Block H</item>
+        <item>Block J</item>
+    </string-array>
+
+    <string-array name="problem_options">
+        <item>Lighting</item>
+        <item>Plumbing</item>
+        <item>Electrical</item>
+        <item>Sewage
+Projector
+WiFi
+Leaking Toilet
+Lights
+Electricity
+Leaking taps
+Burst water pipe
+Windows
+Computers
+Laptops
+Classroom furniture
+Leaking ceiling
+Air conditioner
+Fan
+Door</item>
+        <item>Other</item>
+    </string-array>
+    <string name="title_activity_admin_panel">AdminPanel</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

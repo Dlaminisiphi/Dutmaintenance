@@ -3,13 +3,13 @@ package com.example.dutmaintenance;
 public class Reviews {
     private float rating;
     private String reviewText;
-    private long timestamp;
+    private Float timestamp;
 
     public Reviews() {
         // Default constructor required for calls to DataSnapshot.getValue(Review.class)
     }
 
-    public Reviews(float rating, String reviewText, long timestamp) {
+    public Reviews(float rating, String reviewText, Float timestamp) {
         this.rating = rating;
         this.reviewText = reviewText;
         this.timestamp = timestamp;
@@ -31,11 +31,11 @@ public class Reviews {
         this.reviewText = reviewText;
     }
 
-    public long getTimestamp() {
+    public Float getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(long timestamp) {
+    public void setTimestamp(Float timestamp) {
         this.timestamp = timestamp;
     }
 }

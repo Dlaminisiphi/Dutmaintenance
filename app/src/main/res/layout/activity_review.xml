@@ -23,6 +23,8 @@
         android:id="@+id/rateCount"
         android:layout_width="match_parent"
         android:layout_height="37dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
         android:textAppearance="?android:textAppearanceMedium" />
 
     <EditText
@@ -30,7 +32,10 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
         android:hint="Enter your review here"/>
+
 
     <Button
         android:id="@+id/submit_button"

@@ -23,7 +23,7 @@ public class login extends AppCompatActivity {
     TextInputEditText editTextEmail, editTextPassword, editTextPassword1;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
-    Button buttonLogin,buttonAdmin;
+    Button buttonLogin,buttonAdmin,buttonReviews;
     TextView textView;
     @Override
     public void onStart() {
@@ -49,6 +49,16 @@ public class login extends AppCompatActivity {
         progressBar=findViewById(R.id.ProgressBar);
         textView=findViewById(R.id.SignUpNow);
         buttonAdmin=findViewById(R.id.ADmin);
+        buttonReviews=findViewById(R.id.LookReview);
+        buttonReviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getApplicationContext(),AllReviews.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
 
 
         textView.setOnClickListener(new View.OnClickListener() {

@@ -107,24 +107,20 @@
 
     <string-array name="problem_options">
         <item>Lighting</item>
-        <item>Plumbing</item>
         <item>Electrical</item>
-        <item>Sewage
-Projector
-WiFi
-Leaking Toilet
-Lights
-Electricity
-Leaking taps
-Burst water pipe
-Windows
-Computers
-Laptops
-Classroom furniture
-Leaking ceiling
-Air conditioner
-Fan
-Door</item>
+        <item>Sewage</item>
+        <item>Projector</item>
+        <item>WiFi</item>
+        <item>Leaking Toilet</item>
+        <item>Leaking taps</item>
+        <item>Burst water pipe</item>
+        <item>Windows</item>
+        <item>Computers and Laptops</item>
+        <item>Classroom furniture</item>
+        <item>Leaking ceiling</item>
+        <item>Air conditioner</item>
+        <item>Fan</item>
+        <item>Door</item>
         <item>Other</item>
     </string-array>
     <string name="title_activity_admin_panel">AdminPanel</string>

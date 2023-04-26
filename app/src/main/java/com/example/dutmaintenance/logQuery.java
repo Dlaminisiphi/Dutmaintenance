@@ -79,6 +79,8 @@ public class logQuery extends AppCompatActivity {
     private static final int REQUEST_IMAGE_SELECT = 1;
     private StorageReference mStorageRef;
     private DatabaseReference mDatabaseRef;
+    private StorageTask mUploadTask;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,8 +129,13 @@ public class logQuery extends AppCompatActivity {
                 }
                 if (TextUtils.isEmpty(problem)){
                     Toast.makeText(logQuery.this, "Please write A Detailed Description", Toast.LENGTH_SHORT).show();
+                }else if (mUploadTask!=null && mUploadTask.isInProgress()){
+                    Toast.makeText(logQuery.this, "Upload in progress", Toast.LENGTH_SHORT).show();
+
+
                 }else {
-                    uploadFile();;
+                    uploadFile();
+
                 }
 
             }
@@ -230,7 +237,8 @@ public class logQuery extends AppCompatActivity {
     private void uploadFile() {
         if (mImageUri != null) {
             StorageReference fileReference = mStorageRef.child(System.currentTimeMillis() + "." + getFileExtension(mImageUri));
-            fileReference.putFile(mImageUri)
+
+            mUploadTask=fileReference.putFile(mImageUri)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {

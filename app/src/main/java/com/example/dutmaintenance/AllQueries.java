@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -26,6 +28,7 @@ public class AllQueries extends AppCompatActivity {
     private ProgressBar mProgressCircle;
     private DatabaseReference mDatabaseRef;
     private List<Upload> mUploads;
+    private Button homeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,15 @@ public class AllQueries extends AppCompatActivity {
         mRecyclerView=findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mProgressCircle=findViewById(R.id.progress_circle);
+        homeButton=findViewById(R.id.home_button);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 

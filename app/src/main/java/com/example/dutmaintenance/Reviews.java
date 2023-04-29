@@ -6,7 +6,7 @@ public class Reviews {
     private Float timestamp;
 
     public Reviews() {
-        // Default constructor required for calls to DataSnapshot.getValue(Review.class)
+
     }
 
     public Reviews(float rating, String reviewText, Float timestamp) {

@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="378dp"
-        android:layout_height="404dp"
+        android:layout_height="match_parent"
         android:layout_marginLeft="16dp"
         android:orientation="vertical">
 
@@ -84,6 +84,7 @@
                 android:textSize="15sp" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -105,8 +106,7 @@
                 android:layout_marginLeft="8dp"
                 android:text="Arya"
                 android:textColor="@color/black"
-                android:textSize="15sp"
-                />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -131,8 +131,34 @@
                 android:layout_marginLeft="8dp"
                 android:text="No wifi"
                 android:textColor="@color/black"
-                android:textSize="15sp"
-                android:layout_marginBottom="30dp"/>
+                android:textSize="15sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Query Starus :"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Stutus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="No wifi"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
 
 
         </LinearLayout>

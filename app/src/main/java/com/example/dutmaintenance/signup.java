@@ -108,8 +108,6 @@ public class signup extends AppCompatActivity {
                                     }
                                 }
                             });
-                    // Passwords match
-                    // Add your code here for the case where the passwords match
                 }
 
 

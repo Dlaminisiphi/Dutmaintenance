@@ -11,6 +11,8 @@ public class Upload {
     private String mkey;
     private String memail;
     private String mImageUrl;
+    private String mstatus;
+
     public Upload(){
 
     }
@@ -23,6 +25,7 @@ public class Upload {
         mfloorEditText=floor;
         mproblemEditText=problem;
         mproblemSpinner=problemS;
+        mstatus="not seen";
         mImageUrl=ImageUrl;
 
     }
@@ -73,6 +76,12 @@ public class Upload {
 
     public void setImageUrl(String ImageUrl) {
        mImageUrl = ImageUrl;
+    }
+    public String getStatus(){
+        return mstatus;
+    }
+    public void setStatus(String status){
+        mstatus=status;
     }
     @Exclude
     public String getkey(){

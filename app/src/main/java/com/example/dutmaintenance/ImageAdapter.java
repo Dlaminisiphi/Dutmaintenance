@@ -36,6 +36,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
          holder.textViewFloor.setText(uploadCurrent.getFloor());
          holder.textViewProblemC.setText(uploadCurrent.getProblemS());
          holder.textViewProblemD.setText(uploadCurrent.getProblem());
+         holder.textViewStatus.setText(uploadCurrent.getStatus());
 
         Picasso.with(mContext)
                 .load(uploadCurrent.getImageUrl())
@@ -52,7 +53,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     }
 
     public class  ImageViewHolder extends RecyclerView.ViewHolder{
-        public TextView textViewBlock,textViewCampus,textViewFloor,textViewProblemD,textViewProblemC;
+        public TextView textViewBlock,textViewCampus,textViewFloor,textViewProblemD,textViewProblemC,textViewStatus;
         public ImageView imageView;
         public ImageViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,6 +63,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             textViewFloor=itemView.findViewById(R.id.floor);
             textViewProblemC=itemView.findViewById(R.id.ProblemC);
             textViewProblemD=itemView.findViewById(R.id.ProblemD);
+            textViewStatus=itemView.findViewById(R.id.Stutus);
             imageView=itemView.findViewById(R.id.image);
 
 

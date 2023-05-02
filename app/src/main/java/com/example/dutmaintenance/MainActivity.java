@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent= new Intent(getApplicationContext(),logQuery.class);
                 startActivity(intent);
                 finish();
+
             }
         });
         buttonReview.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent= new Intent(getApplicationContext(),Review.class);
                 startActivity(intent);
                 finish();
+
             }
         });
         buttonLogout.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent= new Intent(getApplicationContext(),login.class);
                 startActivity(intent);
                 finish();
+
             }
 
         });
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent= new Intent(getApplicationContext(),AllQueries.class);
                 startActivity(intent);
                 finish();
+
             }
         });
     }

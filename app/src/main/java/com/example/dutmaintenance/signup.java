@@ -55,6 +55,7 @@ public class signup extends AppCompatActivity {
                 Intent intent= new Intent(getApplicationContext(),login.class);
                 startActivity(intent);
                 finish();
+
             }
         });
 
@@ -69,21 +70,21 @@ public class signup extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(email)){
                     Toast.makeText(signup.this, "Enter Email", Toast.LENGTH_SHORT).show();
-                    return;
+
                 }
                 if (TextUtils.isEmpty(password)) {
                     Toast.makeText(signup.this, "Enter Your password", Toast.LENGTH_SHORT).show();
-                    return;
+
                 }
                 if (TextUtils.isEmpty(password1)){
                     Toast.makeText(signup.this, "Please Re-enter Password", Toast.LENGTH_SHORT).show();
-                    return;
+
 
                 }
                 if (!password.equals(password1)) {
                     progressBar.setVisibility(view.GONE);
                     Toast.makeText(signup.this, "Your passwords do not match", Toast.LENGTH_SHORT).show();
-                    return;
+
 
 
                 } else {
@@ -109,8 +110,6 @@ public class signup extends AppCompatActivity {
                                 }
                             });
                 }
-
-
             }
         });
     }

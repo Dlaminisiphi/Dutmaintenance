@@ -4,26 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminPannel">
+    tools:context=".QueryRecieved">
     <ProgressBar
-        android:id="@+id/progress_circlee"
+        android:id="@+id/QProgress_circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_vieww"
+        android:id="@+id/QRecycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
     <Button
-        android:id="@+id/AHome_button"
+        android:id="@+id/QHome_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:text="Go back to home page" />
-
-
 
 </RelativeLayout>

@@ -37,17 +37,21 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Reviews reviews = mReviews.get(position);
+        holder.userEmail.setText(reviews.getUserEmail());
         holder.ratingBar.setRating(reviews.getRating());
         holder.reviewContent.setText(reviews.getReviewText());
         try {
             Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(Float.toString(reviews.getTimestamp()));
-            holder.timestamp.setText(new SimpleDateFormat("dd MMMM yyyy", Locale.getDefault()).format(date));
+            String formattedDateTime = new SimpleDateFormat("dd MMMM yyyy, hh:mm a", Locale.getDefault()).format(date);
+            holder.timestamp.setText(formattedDateTime);
         } catch (ParseException e) {
             Log.e(TAG, "Error parsing date", e);
             // Assuming that reviews.getTimestamp() returns a Float value that represents a date or time:
             Date timestampDate = new Date(reviews.getTimestamp().longValue());
-            holder.timestamp.setText(new SimpleDateFormat("dd MMMM yyyy", Locale.getDefault()).format(timestampDate));
+            String formattedDateTime = new SimpleDateFormat("dd MMMM yyyy, hh:mm a", Locale.getDefault()).format(timestampDate);
+            holder.timestamp.setText(formattedDateTime);
         }
+
 
 
     }
@@ -61,7 +65,7 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public RatingBar ratingBar;
-        public TextView reviewContent;
+        public TextView reviewContent,userEmail;
         public TextView timestamp;
 
         public ViewHolder(@NonNull View itemView) {
@@ -69,6 +73,7 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ViewHold
             ratingBar = itemView.findViewById(R.id.rating_bar);
             reviewContent = itemView.findViewById(R.id.review_content);
             timestamp = itemView.findViewById(R.id.timestamp);
+            userEmail=itemView.findViewById(R.id.rating_text);
             ratingBar.setIsIndicator(true);
         }
     }

@@ -104,6 +104,7 @@ public class logQuery extends AppCompatActivity {
                 Intent intent= new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
                 finish();
+
             }
         });
 
@@ -115,6 +116,7 @@ public class logQuery extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openFileChooser();
+
 
             }
         });
@@ -138,6 +140,7 @@ public class logQuery extends AppCompatActivity {
 
                 }
 
+
             }
         });
         ViewQueryButton.setOnClickListener(new View.OnClickListener() {
@@ -145,7 +148,6 @@ public class logQuery extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent= new Intent(getApplicationContext(),AllQueries.class);
                 startActivity(intent);
-
             }
         });
         String[] campusOptions = getResources().getStringArray(R.array.campus_options);
@@ -256,6 +258,10 @@ public class logQuery extends AppCompatActivity {
                                         public void onSuccess(Uri uri) {
                                             String userId = FirebaseAuth.getInstance().getCurrentUser().getUid(); // get the current user's ID
                                             Upload upload = new Upload(campusSpinner.getSelectedItem().toString(), blockSpinner.getSelectedItem().toString(), floorEditText.getText().toString(), problemEditText.getText().toString(), problemSpinner.getSelectedItem().toString(), uri.toString());
+                                            upload.setStatus("NOT SEEN");
+                                            upload.setAssignedPerson("null");
+                                            upload.setAdminComment("null");
+                                            upload.setUserId(userId);
                                             String uploadId = mDatabaseRef.child(userId).push().getKey(); // store the uploaded data under the current user's ID
                                             mDatabaseRef.child(userId).child(uploadId).setValue(upload);
 

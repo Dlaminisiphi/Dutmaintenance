@@ -42,6 +42,7 @@ public class Adminlogin extends AppCompatActivity {
                 Intent intent= new Intent(getApplicationContext(),login.class);
                 startActivity(intent);
                 finish();
+
             }
         });
         buttonLogin.setOnClickListener(new View.OnClickListener() {
@@ -56,10 +57,11 @@ public class Adminlogin extends AppCompatActivity {
                      progressBar.setVisibility(View.GONE);
                 } else {
                     progressBar.setVisibility(View.GONE);
-                    Intent intent= new Intent(getApplicationContext(),AdminPannel.class);
+                    Intent intent= new Intent(getApplicationContext(),AdminHome.class);
                     startActivity(intent);
                     finish();
                 }
+
 
             }
 

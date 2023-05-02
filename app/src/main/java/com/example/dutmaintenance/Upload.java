@@ -12,14 +12,17 @@ public class Upload {
     private String memail;
     private String mImageUrl;
     private String mstatus;
+    private String userId;
+    private String assignedPerson;
+    private String adminComment;
 
     public Upload(){
 
     }
     public  Upload(String campus,String block,String floor,String problem,String problemS,String ImageUrl){
-        if(campus.trim().equals("")){
-            campus="NO Name";
-        }
+
+
+
         mcampusSpinner= campus;
         mblockSpinner=block;
         mfloorEditText=floor;
@@ -99,4 +102,26 @@ public class Upload {
     public void setemail(String email){
         memail=email;
     }
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+    public String getUserId() {
+        return this.userId;
+    }
+
+
+
+    public String getAssignedPerson() {
+        return this.assignedPerson;
+    }
+    public void setAssignedPerson(String assignedPerson){
+        this.assignedPerson=assignedPerson;
+    }
+    public String getAdminComment(){
+        return  this.adminComment;
+    }
+    public void setAdminComment(String adminComment){
+        this.adminComment= adminComment;
+    }
 }
+

@@ -4,6 +4,7 @@ public class Reviews {
     private float rating;
     private String reviewText;
     private Float timestamp;
+    private String userEmail;
 
     public Reviews() {
 
@@ -13,6 +14,7 @@ public class Reviews {
         this.rating = rating;
         this.reviewText = reviewText;
         this.timestamp = timestamp;
+        this.userEmail = userEmail;
     }
 
     public float getRating() {
@@ -37,5 +39,12 @@ public class Reviews {
 
     public void setTimestamp(Float timestamp) {
         this.timestamp = timestamp;
+    }
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 }

@@ -44,6 +44,7 @@ public class AllQueries extends AppCompatActivity {
                 Intent intent= new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
                 finish();
+
             }
         });
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));

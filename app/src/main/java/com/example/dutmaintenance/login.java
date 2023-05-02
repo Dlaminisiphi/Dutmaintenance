@@ -56,7 +56,6 @@ public class login extends AppCompatActivity {
                 Intent intent= new Intent(getApplicationContext(),AllReviews.class);
                 startActivity(intent);
                 finish();
-
             }
         });
 
@@ -67,6 +66,7 @@ public class login extends AppCompatActivity {
                 Intent intent= new Intent(getApplicationContext(),signup.class);
                 startActivity(intent);
                 finish();
+
             }
         });
         buttonAdmin.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +75,7 @@ public class login extends AppCompatActivity {
                 Intent intent= new Intent(getApplicationContext(),Adminlogin.class);
                 startActivity(intent);
                 finish();
+
 
             }
         });
@@ -87,11 +88,11 @@ public class login extends AppCompatActivity {
                 password=String.valueOf(editTextPassword.getText());
                 if (TextUtils.isEmpty(email)){
                     Toast.makeText(login.this, "Enter Email", Toast.LENGTH_SHORT).show();
-                    return;
+
                 }
                 if (TextUtils.isEmpty(password)) {
                     Toast.makeText(login.this, "Enter Your password", Toast.LENGTH_SHORT).show();
-                    return;
+
                 }
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
@@ -111,6 +112,7 @@ public class login extends AppCompatActivity {
                                 }
                             }
                         });
+
             }
         });
     }

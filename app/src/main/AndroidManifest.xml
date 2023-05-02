@@ -18,6 +18,12 @@
         android:theme="@style/Theme.Material3.Light"
         tools:targetApi="31">
         <activity
+            android:name=".FinishedQueries"
+            android:exported="false" />
+        <activity
+            android:name=".AdminHome"
+            android:exported="false" />
+        <activity
             android:name=".AllReviews"
             android:exported="false" />
         <activity
@@ -34,6 +40,9 @@
             android:exported="false" />
         <activity
             android:name=".logQuery"
+            android:exported="false" />
+        <activity
+            android:name=".QueryRecieved"
             android:exported="false" />
         <activity
             android:name=".signup"

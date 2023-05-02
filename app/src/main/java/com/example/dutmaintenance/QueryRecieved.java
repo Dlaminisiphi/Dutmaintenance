@@ -222,14 +222,14 @@ public class QueryRecieved extends AppCompatActivity implements AdminImageAdapto
                 // Create a new message
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress("flaskschoolproject@gmail.com"));
-                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("dlaminisiphi3@gmail.com, 22123087@dut4life.ac.za, 22149618@dut4life.ac.za"));
+                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("22149618@dut4life.ac.za"));
                 message.setSubject("Query Fixed");
                 message.setText("Hello,\n" +
                         "We are writing to inform you that your maintenance request has been successfully completed. Our team has resolved the issue and everything should be functioning normally now.\n" +
                         "Thank you for bringing this issue to our attention and for your patience while we worked on it.Report From Team:\n"+ FixedProblem+ "\nIf you have any further questions or concerns, please don't hesitate to reach out to us.\n" +
                         "We hope that you continue to have a pleasant experience using our service.\n" +
                         "Best regards,\n" +
-                        "Sipho\nDut maintenance Team");
+                        "Dut maintenance Team");
 
                 Transport.send(message);
                 return true;

@@ -215,7 +215,7 @@ public class AdminPannel extends AppCompatActivity implements AdminImageAdaptor.
                 // Create a new message
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress("flaskschoolproject@gmail.com"));
-                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("dlaminisiphi3@gmail.com, 22123087@dut4life.ac.za, 22149618@dut4life.ac.za"));
+                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("22149618@dut4life.ac.za"));
                 message.setSubject("Query [" + referenceNumber + "]");
                 message.setText("Hello,\n" +
                         "Thank you for reaching out to us. This is an automated message to confirm that we have received your query [" + referenceNumber + "] and our team is currently working on fixing it. We have assigned " + assignedPerson + " to fix your query. We understand the importance of your issue and we are doing our best to resolve it as quickly...");

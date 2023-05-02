@@ -24,7 +24,7 @@ import java.util.List;
 
 public class FinishedQueries extends AppCompatActivity {
     private RecyclerView mRecyclerView;
-    private AdminImageAdaptor mAdapter;
+    private FinalAdapter mAdapter;
     private ProgressBar mProgressCircle;
     private FirebaseStorage mstorage;
     private DatabaseReference mDatabaseRef;
@@ -40,15 +40,15 @@ public class FinishedQueries extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finished_queries);
-        mRecyclerView=findViewById(R.id.QRecycler_view);
+        mRecyclerView=findViewById(R.id.FRecycler_view);
         mRecyclerView.setHasFixedSize(true);
-        mProgressCircle=findViewById(R.id.QProgress_circle);
-        LogOutBtn=findViewById(R.id.QHome_button);
+        mProgressCircle=findViewById(R.id.FProgress_circle);
+        LogOutBtn=findViewById(R.id.FHome_button);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
         mUploads= new ArrayList<>();
-        mAdapter= new AdminImageAdaptor(FinishedQueries.this,mUploads);
+        mAdapter= new FinalAdapter(FinishedQueries.this,mUploads);
         mRecyclerView.setAdapter(mAdapter);
         mstorage=FirebaseStorage.getInstance();
         mDatabaseRef= FirebaseDatabase.getInstance().getReference("uploads");
@@ -68,12 +68,13 @@ public class FinishedQueries extends AppCompatActivity {
                 for(DataSnapshot userSnapshot : snapshot.getChildren()){
                     String uid = userSnapshot.getKey();
                     DatabaseReference userRef = mDatabaseRef.child(uid);
+                    //Gets data from database
                     userRef.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             for(DataSnapshot uploadSnapshot : snapshot.getChildren()){
                                 Upload upload=uploadSnapshot.getValue(Upload.class);
-                                if(upload != null && "PROBLEM SEEN".equals(upload.getStatus())) {
+                                if(upload != null && "PROBLEM FIXED".equals(upload.getStatus())) {
                                     upload.setkey(uploadSnapshot.getKey());
                                     mUploads.add(upload);
                                 }
